@@ -1,0 +1,46 @@
+### Signup as a new request
+
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+    "email": "lerolero2@test.com",
+    "password": "12345"
+}
+
+### Signin as an existing user
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email": "lerolero2@test.com",
+    "password": "12345"
+}
+
+### Get the currently signed in user
+GET http://localhost:3000/auth/whoami
+
+
+### SignOut current user
+POST http://localhost:3000/auth/signout
+
+
+### Find a particular user data
+GET http://localhost:3000/auth/2
+
+
+### Find a particular user data by email
+GET http://localhost:3000/auth?email=bjcoliveira1@fsf.com
+
+
+### Delete a user woth a given id
+DELETE http://localhost:3000/auth/3
+
+### Update an user attributes
+PATCH http://localhost:3000/auth/2
+content-type: application/json
+
+{
+    "email": "bla2bla@gmail.com",
+    "password": "acunamatata"
+}

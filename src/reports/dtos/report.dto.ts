@@ -17,6 +17,8 @@ export class ReportDto {
     model: string;
     @Expose()
     mileage: number;
+    @Expose()
+    approved: boolean;
 
     //with this tranform the user details will not be returned when POSTing a report 
     @Transform(({ obj }) => obj.user.id) //from the original ReportDto data (obj) get the user.id and store it in this userId property

@@ -19,7 +19,8 @@ switch (process.env.NODE_ENV) {
         Object.assign(dbConfig, {
             type: 'sqlite',
             database: 'db.sqlite',
-            entities: ['**/*.entity.ts']
+            entities: ['**/*.entity.ts'],
+            migrationsRun: true //force migrations to run whenever tests run
         });
         break;
     case 'production':
